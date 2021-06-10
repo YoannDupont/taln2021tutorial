@@ -20,7 +20,7 @@ Le tutoriel sera sous forme d'un TP où nous présenterons un "workflow" de base
 
 ### Corpus
 
-- corpus17 de Simon Gabay et Alexandre Bartz, données du 17ème siècle (https://github.com/e-ditiones/CORPUS17)
+- corpus LEM17 de Simon Gabay, Thibault Clérice, Matthias Gille-Levenson, Jean-Baptiste Camps, Jean-Baptiste Tanguy, données du 17ème siècle (https://github.com/e-ditiones/LEM17)
 - corpus CLEF-HIPE de Maud Ehrammn et al., données du 19ème et du 20ème (https://github.com/impresso/CLEF-HIPE-2020/)
 - corpus CONLL 2003 (https://github.com/synalp/NER/tree/master/corpus/CoNLL-2003)
 
