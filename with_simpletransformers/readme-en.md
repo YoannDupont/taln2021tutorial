@@ -3,7 +3,9 @@
 ## External ressources required
 
 [python3 (already installed on UNIX systems)](https://www.python.org)
+
 [simpletransformers](https://github.com/ThilinaRajapakse/simpletransformers)
+
 [SEM (for now)](https://github.com/YoannDupont/SEM)
 
 ## Installation
@@ -14,7 +16,7 @@ First, install virtualenv for python, create a new virtual environment called
 ```
 pip3 install virtualenv
 python3 -m virtualenv ${HOME}/venvs/cantal
-${HOME}/venvs/cantal/bin/activate
+source ${HOME}/venvs/cantal/bin/activate
 ```
 
 Then, install simpletransformers :
@@ -23,7 +25,15 @@ Then, install simpletransformers :
 pip install simpletransformers
 ```
 
-And install SEM using the [installation procedure](https://github.com/YoannDupont/SEM/blob/dev/install.md).
+To install SEM, first clone it from github and go in the `dev` branch:
+
+```
+git clone git@github.com:YoannDupont/SEM.git
+cd SEM/
+git checkout dev
+```
+
+Then, install SEM using the [installation procedure](https://github.com/YoannDupont/SEM/blob/dev/install.md).
 
 ## Train some model
 

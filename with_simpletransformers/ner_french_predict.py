@@ -21,7 +21,6 @@ from simpletransformers.ner import NERModel
 
 segmenter = sem.modules.segmentation.SEMModule("fr")
 exporter = sem.modules.export.SEMModule("html", ner_column="NER")
-consistency = sem.modules.label_consistency.SEMModule("NER")
 
 
 def main(model_path):
@@ -43,8 +42,6 @@ def main(model_path):
         tags = [val for val in [list(l.values())[0] for l in pred]]
         doc.corpus.sentences[i].add(tags, "NER")
         tagss.append(tags)
-
-    consistency.process_document(doc)
 
     doc._annotations["NER"] = sem.storage.chunk_annotation_from_corpus(
         doc.corpus, "NER", "NER", reference=doc.segmentation("tokens")
