@@ -131,12 +131,22 @@ span[id="Location"] {
     color: #FF0000;
 }
 
+span[id="loc"] {
+    background-color: #FFCCCC;
+    color: #FF0000;
+}
+
 span[id="Organization"] {
     background-color: #CCEEEE;
     color: #008888;
 }
 
 span[id="Person"] {
+    background-color: #CCCCFF;
+    color: #0000FF;
+}
+
+span[id="pers"] {
     background-color: #CCCCFF;
     color: #0000FF;
 }
