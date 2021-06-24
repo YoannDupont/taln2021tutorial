@@ -30,7 +30,7 @@ pip install simpletransformers
 Pour installer SEM, clonez-le depuis github et allez dans la branche `dev` :
 
 ```
-git clone git@github.com:YoannDupont/SEM.git
+git clone https://github.com/YoannDupont/SEM.git
 cd SEM/
 git checkout dev
 ```
