@@ -106,11 +106,11 @@ model_args.reprocess_input_data = True
 model_args.num_train_epochs = 5
 model_args.use_multiprocessing = False
 model_args.multiprocessing_chunksize = 1
-model_args.process_count = 0
+model_args.process_count = 1
 model_args.train_batch_size = 8
 model_args.save_model_every_epoch = False
 model_args.save_eval_checkpoints = False
-model_args.dataloader_num_workers = 0
+model_args.dataloader_num_workers = 1
 # TODO: in real world, change this to evaluate with a given number of training steps instead of each epoch
 # following the "gainz fer teh paperz" heuristic
 model_args.evaluate_during_training_steps = 0
