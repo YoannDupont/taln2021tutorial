@@ -1,0 +1,3 @@
+simpletransformers
+torch
+setuptools

@@ -21,10 +21,10 @@ python3 -m virtualenv ${HOME}/venvs/cantal
 source ${HOME}/venvs/cantal/bin/activate
 ```
 
-Installez simpletransformers :
+Installez la plupart des librairies nécessaires (dont simpletransformers) :
 
 ```
-pip install simpletransformers
+pip install -r requirements.txt
 ```
 
 Pour installer SEM, clonez-le depuis github et allez dans la branche `dev` :
