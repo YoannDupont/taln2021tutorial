@@ -35,7 +35,7 @@ cd SEM/
 git checkout dev
 ```
 
-Puisnstallez SEM à l'aide de la [procédure d'installation](https://github.com/YoannDupont/SEM/blob/dev/install.md).
+Puis installez SEM à l'aide de la [procédure d'installation](https://github.com/YoannDupont/SEM/blob/dev/install.md).
 
 ## Entraînez un modèle
 
