@@ -32,6 +32,7 @@ Pour installer SEM, clonez-le depuis github et allez dans la branche `dev` :
 ```
 git clone https://github.com/YoannDupont/SEM.git
 cd SEM/
+git fetch
 git checkout dev
 ```
 
