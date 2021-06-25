@@ -1,3 +1,5 @@
+For the french version, see [readme.md](readme.md)
+
 # Training some french NER model using simpletransformers library
 
 ## External ressources required
@@ -25,18 +27,28 @@ Install most required libraries (including simpletransformers):
 pip install -r requirements.txt
 ```
 
-To install SEM, first clone it from github and go in the `dev` branch:
+To install SEM, first clone it from github and go in the `dev` branch and follow
+the installation procedure:
 
 ```
 git clone https://github.com/YoannDupont/SEM.git
 cd SEM/
 git fetch
 git checkout dev
+source ${HOME}/venvs/cantal/bin/activate
+pip install -r requirements.txt
+python ./setup.py install
 ```
 
 Then, install SEM using the [installation procedure](https://github.com/YoannDupont/SEM/blob/dev/install.md).
 
 ## Train some model
+
+Before launching commands, go to the folder :
+
+```
+cd with_simpletransformers
+```
 
 Training will be done using the `named_entity_recognition_french.py` script. To
 see the help of this script, launch:
@@ -64,16 +76,29 @@ script accepts CoNLL files.
 
 ## Apply a trained model
 
+Before launching commands, go to the folder :
+
+```
+cd with_simpletransformers
+```
+
 To apply a trained model on a random sentence, use the command:
 
 ```
-echo "Je suis chez ce cher Serge." | python ./ner_french_predict.py path/to/best_model
+echo "Je suis chez ce cher Serge." | python ./ner_french_predict.py path/to/best_model_folder
 ```
 
 To apply a trained model on a text file, use the command:
 
 ```
-cat <inputfile> | python ./ner_french_predict_sem.py path/to/best_model
+cat <inputfile> | python ./ner_french_predict_sem.py path/to/best_model_folder
 ```
 
 This will display on the terminal the output of the NER.
+
+For the HTML visualization to work as intended, you can redirect the output to a
+file to a folder with the required CSS style-sheets:
+
+```
+cat <inputfile> | python ./ner_french_predict_sem.py path/to/best_model_folder > ../sample_output/resultat.html
+```

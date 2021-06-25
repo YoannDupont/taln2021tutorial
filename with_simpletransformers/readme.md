@@ -1,4 +1,4 @@
-Pour une version anglaise, voir [readme-en.md](readme-en.md)
+Pour la version anglaise, voir [readme-en.md](readme-en.md)
 
 # Entraîner un model de REN avec la bibliothèque simpletransformers
 
@@ -27,18 +27,28 @@ Installez la plupart des librairies nécessaires (dont simpletransformers) :
 pip install -r requirements.txt
 ```
 
-Pour installer SEM, clonez-le depuis github et allez dans la branche `dev` :
+Pour installer SEM, clonez-le depuis github, allez dans la branche `dev` et
+suivez la procédure d'installation :
 
 ```
 git clone https://github.com/YoannDupont/SEM.git
 cd SEM/
 git fetch
 git checkout dev
+source ${HOME}/venvs/cantal/bin/activate
+pip install -r requirements.txt
+python ./setup.py install
 ```
 
 Puis installez SEM à l'aide de la [procédure d'installation](https://github.com/YoannDupont/SEM/blob/dev/install.md).
 
 ## Entraînez un modèle
+
+Avant d'exécuter les commandes, placez-vous dans le dossier :
+
+```
+cd with_simpletransformers
+```
 
 L'entraînement se fait via le script `named_entity_recognition_french.py`. Pour
 voir l'aide du script, lancez la commande :
@@ -66,16 +76,29 @@ fichiers CoNLL.
 
 ## Appliquez un modèle entraîné
 
-Pour appliquer un modèle entraîné sur une phrase, lancez la commande:
+Avant d'exécuter les commandes, placez-vous dans le dossier :
 
 ```
-echo "Je suis chez ce cher Serge." | python ./ner_french_predict.py path/to/best_model
+cd with_simpletransformers
 ```
 
-Pour appliquer un modèle entraîné sur un fichier texte, lancez la commande:
+Pour appliquer un modèle entraîné sur une phrase, lancez la commande :
 
 ```
-cat <inputfile> | python ./ner_french_predict_sem.py path/to/best_model
+echo "Je suis chez ce cher Serge." | python ./ner_french_predict.py chemin/vers/dossier_modele
+```
+
+Pour appliquer un modèle entraîné sur un fichier texte, lancez la commande :
+
+```
+cat <inputfile> | python ./ner_french_predict_sem.py chemin/vers/dossier_modele
 ```
 
 Le script affichera dans le terminal le résultat de l'annotation en entités nommées.
+
+Pour que la visualisation en HTML se fasse correctement, vous pouvez rediriger
+la sortie vers un fichier dans un dossier avec les feuilles de style CSS requises :
+
+```
+cat <inputfile> | python ./ner_french_predict_sem.py chemin/vers/dossier_modele > ../sample_output/resultat.html
+```
